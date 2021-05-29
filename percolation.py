@@ -28,9 +28,9 @@ import skimage.measure
 N1, N2 = (100,100)
 
 #Function use :
-USE = 3
+USE = 1
 # 1 - Rempli simplement la matrice et fait un étude de percolation avec le taux suivant :
-rate = 2/5
+rate = 1/5
 # 2 - Etude statistique sur le nombre d'itération suivant :
 nIteration = 20
 
@@ -143,7 +143,7 @@ def seq1(surface, emptyCells):
 # im = plt.imshow(surface, vmin=0, vmax=1)
 
 # def init():
-#     reseqdt(surface, emptyCells)
+#     reset(surface, emptyCells)
 
 # def animate(i):
 #     im.setData(surface)
@@ -155,8 +155,8 @@ def seq2(surface, emptyCells):
     meanRate = []
     for k in range(nIteration):
         
-        #if (k%(nIteration/10)==0):
-        #    print(str(k/nIteration*100)+"% complété")
+        if (k%(nIteration/10)==0):
+           print(str(k/nIteration*100)+"% complété")
             
         result = None
         isP, value = None, None
@@ -172,7 +172,7 @@ def seq2(surface, emptyCells):
         result[result!=value] = 0
         #pltShow(result)
         surface, emptyCells = reset(surface, emptyCells)
-    #print("\nLa percolation se fait en moyenne à un taux de "+str(np.mean(meanRate))+"%")
+    print("\nLa percolation se fait en moyenne à un taux de "+str(np.mean(meanRate))+"%")
     return np.mean(meanRate)
     
 
@@ -181,7 +181,7 @@ def seq3():
     total = 5
     for j in range(total):
         print(j,"/",total)
-        n = [1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,150,200]
+        n = [1,2,3,4,5,6,7,8,9,10,25,50,75,100,200]
         r = []
         for i in n:
             print(i)
