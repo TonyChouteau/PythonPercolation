@@ -1,8 +1,8 @@
 # PythonPercolation
 Percolation simulation using python
 
-Exemple de percolation :
+Exemple de percolation : \
 ![Exemple](https://github.com/TonyChouteau/PythonPercolation/blob/master/seq2.png)
 
-Etude statistique sur le pourcentage de remplissage jusqu'à percolation dépendament de la largeur de la matrice (percolation gauche-droite):
+Etude statistique sur le pourcentage de remplissage jusqu'à percolation dépendament de la largeur de la matrice (percolation gauche-droite): \
 ![Exemple](https://github.com/TonyChouteau/PythonPercolation/blob/master/seq3.png)
